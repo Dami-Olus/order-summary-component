@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"
+    >
+
+      mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-color: rgba(224, 232, 255, 0.7);
+        background-repeat: no-repeat;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .order-summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 401px;
+        margin: auto;
+        height: auto;
+        margin-top: 100px;
+        color: #202f4e;
+        border-radius: 20px;
+      }
+
+      .banner {
+        background-image: url(images/illustration-hero.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 0px;
+        height: 196px;
+        width: 401px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .body {
+        color: gray;
+      }
+      .body-text {
+        text-align: center;
+      }
+      .billing {
+        margin-bottom: 20px;
+      }
+      .billing-card {
+        display: flex;
+        background-color: #f8f9fe;
+        margin-left: -150px;
+        margin-right: -150px;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+      }
+      .billing-card-icon {
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+      .billing-card-text {
+        display: flex;
+        flex-direction: column;
+        margin-right: 65px;
+        font-weight: bold;
+        color: #202f4e;
+      }
+      .billing-card-price {
+        color: gray;
+        font-weight: 100;
+        margin-top: 6px;
+      }
+      .billing-card-button {
+        margin-right: 15px;
+      }
+      a {
+        color: #2824d6;
+      }
+      .button {
+        display: flex;
+        flex-direction: column;
+      }
+      .button-pay {
+        margin-bottom: 30px;
+        cursor: pointer;
+        margin-left: -100px;
+        margin-right: -100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #2824d6 !important;
+        border-radius: 8px;
+        box-shadow: 2px 12px 29px 5px rgba(40, 36, 214, 0.43);
+      }
+      .button-cancel {
+        background-color: transparent;
+        outline: none;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        color: gray;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+
+      .icon-music {
+        height: 50px;
+        width: 50px;
+      }
+      .button-text {
+        text-transform: none;
+        font-weight: bold;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          font-size: 11px;
+        }
+
+        .order-summary {
+          width: 300px;
+          margin: auto;
+          height: auto;
+          margin-top: 100px;
+        }
+
+        .banner {
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 146px;
+          width: 300px;
+        }
+
+        .billing-card {
+          margin-left: -50px;
+          margin-right: -50px;
+        }
+        .billing-card-icon {
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+
+        .button-pay {
+          margin-left: -80px;
+          margin-right: -80px;
+        }
+
+        .icon-music {
+          height: 40px;
+          width: 40px;
+        }
+        .button-text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="order-summary">
+      <div class="banner"></div>
+      <div class="title">
+        <h1 class="title-text">Order Summary</h1>
+      </div>
+
+      <div class="body">
+        <p class="body-text">
+          You can now listen to millions of songs,<br />
+          audiobooks, and podcasts on any device <br />
+          anywhere you like!
+        </p>
+      </div>
+
+      <div class="billing">
+        <div class="billing-card">
+          <div class="billing-card-icon">
+            <img src="images/icon-music.svg" alt="" class="icon-music" />
+          </div>
+          <div class="billing-card-text">
+            Annual Plan <span class="billing-card-price">$59.99/year</span>
+          </div>
+          <div class="billing-card-button">
+            <a href="">Change</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="mdc-button mdc-button--raised button-pay">
+          <span class="button-text"><h3>Proceed to payment</h3></span>
+        </button>
+        <button class="button-cancel">Cancel Order</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Adedamola Olusakin</a>.
+    </div>
+  </body>
+</html>
